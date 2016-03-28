@@ -1,1 +1,3 @@
-export const Bitmap = require('./lib/bitmap');
+module.exports = {
+  Bitmap: require('./lib/bitmap')
+};
