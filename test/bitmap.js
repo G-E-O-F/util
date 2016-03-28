@@ -15,13 +15,17 @@ describe('Bitmap', function () {
 
   describe('set & get', function () {
 
-    bmp6
-      .write(0, 0, true)
-      .write(0, 1, false)
-      .write(0, 2, true)
-      .write(1, 0, false)
-      .write(1, 1, true)
-      .write(1, 2, false);
+    before(function () {
+
+      bmp6
+        .write(0, 0, true)
+        .write(0, 1, false)
+        .write(0, 2, true)
+        .write(1, 0, false)
+        .write(1, 1, true)
+        .write(1, 2, false);
+
+    });
 
     it('should set and get values at the same coordinates', function () {
 
@@ -38,7 +42,11 @@ describe('Bitmap', function () {
 
   describe('clear', function () {
 
-    bmp6.clear(2, 3, 0, 0);
+    before(function(){
+
+      bmp6.clear(2, 3, 0, 0);
+
+    });
 
     it('should clear all values', function () {
 
