@@ -36,4 +36,21 @@ describe('Bitmap', function () {
 
   });
 
+  describe('clear', function () {
+
+    bmp6.clear(2, 3, 0, 0);
+
+    it('should clear all values', function () {
+
+      return bmp6.get(0, 0).should.be.false &&
+        bmp6.get(0, 1).should.be.false &&
+        bmp6.get(0, 2).should.be.false &&
+        bmp6.get(1, 0).should.be.false &&
+        bmp6.get(1, 1).should.be.false &&
+        bmp6.get(1, 2).should.be.false
+
+    });
+
+  });
+
 });
